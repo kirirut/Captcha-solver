@@ -2,8 +2,8 @@ import cv2
 import torch
 import os
 model_path = 'model/best.pt'
-test_images_folder = '/test'
-output_folder = '/output'
+test_images_folder = 'test'
+output_folder = 'output'
 
 # Создаем папку для сохранения результатов, если она не существует
 os.makedirs(output_folder, exist_ok=True)
@@ -63,7 +63,7 @@ for image_name in os.listdir(test_images_folder):
         print(f"Объекты не обнаружены в '{image_name}'.")
 
 # Проверка на равенство 5 букв
-if total_detected_letters > 0:
+if total_detected_letters > 10:
     detection_percentage = (total_detected_letters / 5) * 100
     print(f"Общее количество обнаруженных букв: {total_detected_letters}.")
     if total_detected_letters == 5:
