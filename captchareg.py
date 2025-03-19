@@ -1,8 +1,6 @@
 import cv2
 import torch
 import os
-
-
 model_path = 'model/best.pt'
 test_images_folder = '/test'
 output_folder = '/output'
